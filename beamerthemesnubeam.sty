@@ -1,0 +1,77 @@
+% Unofficial LaTex beamer theme for Seoul National University
+%
+% Copyright 2014 Lucy Park <ejpark04@snu.ac.kr>
+% http://lucypark.kr
+%
+% This file may be distributed and/or modified under the GNU GPL 3.0 or above
+% http://www.gnu.org/licenses/gpl-3.0.html
+%
+
+\mode<presentation>
+
+\usepackage{color}
+    \newcommand{\red}[1]{\color{red{#1}}} % Usage: {\red{some words}}
+\usepackage{hyperref}
+\usepackage{kotex}
+\bibliographystyle{plain} % {abbrv, acm, alpha, apalike, ieeetr, plain, siam}
+
+% colors
+\definecolor{midnight}{rgb}{0, 0.2235, 0.4980}
+\definecolor{dawn}{rgb}{0.3647, 0.5459, 0.7922}
+\definecolor{olive}{rgb}{0.3, 0.4, 0.1}
+\definecolor{gold}{rgb}{0.8, 0.6, 0.1}
+\setbeamercolor{title}{fg=white, bg=midnight}
+\setbeamercolor{frametitle}{fg=white, bg=dawn}
+\setbeamercolor{section in head/foot}{bg=midnight}
+\setbeamercolor{palette primary}{fg=black, bg=gray!20!white}
+\setbeamercolor{palette secondary}{fg=black, bg=gray!20!white}
+\setbeamercolor{palette tertiary}{fg=black, bg=gold}
+
+% eliminate shadows
+\setbeamertemplate{title page}[default][colsep=-4bp, rounded=true]
+\setbeamertemplate{frametitle}[default][colsep=-4bp, rounded=false, shadow=false]
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{enumerate items}[default]
+
+% fonts
+\renewcommand*{\footnotesize}{\tiny}
+
+% add section contents pages
+\AtBeginSection[]
+{
+    \begin{frame}
+    \frametitle{Contents}
+    \tableofcontents[currentsection]
+    \end{frame}
+}
+
+% add SNU image to title page
+%\addtobeamertemplate{title page}{
+%    \begin{center}
+%    \includegraphics[width=0.5\paperwidth]{images/snu.jpg}
+%    \end{center}
+%}{}
+
+% insert page numbers
+\setbeamertemplate{footline}
+{
+    \hbox{
+    \begin{beamercolorbox}[wd=0.5\paperwidth, ht=2.25ex, dp=1ex]{author in head/foot}
+        \hspace{0.5cm}
+        \insertshortauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=0.5\paperwidth, ht=2.25ex, dp=1ex, right]{date in head/foot}
+        %\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+        \hspace{0.5cm}
+  \end{beamercolorbox}}
+}
+
+% change item styles
+\useinnertheme{rectangles}
+\setbeamertemplate{enumerate item}{
+    \usebeamercolor[bg]{item projected}
+    \raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}
+}
+
+\setbeamertemplate{bibliography item}[text]
