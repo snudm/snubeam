@@ -1,4 +1,6 @@
-# SNUbeam: Unofficial LaTex beamer theme for Seoul National University
+# SNUbeam
+
+Unofficial LaTex beamer theme for Seoul National University
 
 ## Run
 
@@ -9,3 +11,7 @@
 ![](images/example-01.png)
 ![](images/example-03.png)
 ![](images/example-21.png)
+
+## License
+
+GPL v3 (or above)
