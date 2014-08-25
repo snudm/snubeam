@@ -1,0 +1,25 @@
+%----------------------------------------------------------------------------
+% Unofficial LaTex beamer theme for Seoul National University
+%
+% Copyright 2014 Lucy Park <ejpark04@snu.ac.kr>
+% http://lucypark.kr
+%
+% This file may be distributed and/or modified under the GNU GPL 3.0 or above
+% http://www.gnu.org/licenses/gpl-3.0.html
+%----------------------------------------------------------------------------
+
+\usepackage{minted} % requires texlive>=2014
+\newminted{python}{
+    fontsize=\scriptsize, 
+    numbersep=8pt,
+    gobble=4,
+    frame=lines,
+    bgcolor=gray,
+    framesep=3mm} 
+\newmintedfile[pythonfile]{python}{
+    fontsize=\scriptsize, 
+    linenos,
+    numbersep=8pt,
+    frame=lines,
+    bgcolor=gray,
+    framesep=3mm} 
