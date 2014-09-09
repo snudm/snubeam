@@ -23,3 +23,9 @@ Run ``pdflatex`` once. If you include code blocks (i.e., use package ``minted``)
 ## License
 
 GPL v3 (or above)
+
+## References
+
+- [SNU Ph.D. Thesis format](http://ids.snu.ac.kr/wiki/Writing_a_Thesis_in_SNU_Format_Using_LaTex) by IDS Lab
+- [SNU M.S. Thesis format](http://kenshin579.tistory.com/tag/SNU%20thesis%20latex%20template) by kenshin579
+- [SNU Undergrad Thesis format](https://github.com/zeta709/snuthesis) by zeta709
